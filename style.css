@@ -1,0 +1,261 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat-black', sans-serif;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.wrapper
+{
+    position: relative;
+ ;
+    transform: scale(1.5);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: linear-gradient(-45deg, rgb(108, 14, 224) -5%, rgb(240, 55, 166));
+    /* z-index: -2; */
+}
+
+.topCircle
+{
+/* z-index: -1; */
+    background-color: #ff6347;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 100%;
+    top: 5rem;
+    left: 36%;
+    animation: top 3.5s linear 0s infinite alternate forwards;
+     box-shadow: 0px 0px 25px 4px rgba(255,99,71,1);
+}
+@keyframes top {
+    from{
+        left: 36%;
+    }
+    to
+    {
+        left:33% ;
+    }
+    
+}
+
+.bottomCircle
+{
+    /* z-index: -1; */
+    background-color: #5C4B99;
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    bottom: 5rem;
+    right: 34%;
+    box-shadow: 0px 0px 25px 4px #5C4B99;
+    filter: blur(5px);
+    animation: bottom 3s linear 0s infinite alternate forwards;
+}
+@keyframes bottom {
+    from{
+        bottom: 5rem;
+        right: 34%;
+    }
+    to
+    {
+        bottom: 3rem;
+        right:32%;
+    }
+    
+}
+
+h1
+{
+    z-index: 2;
+    color: yellow;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.result
+{
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    background-color: #27005D;
+    gap: 12rem;
+    min-width: 18rem;
+    padding: 0.9rem;
+    border-radius: 1rem;
+    border-bottom: 4px solid #FFA1F5 ;
+    
+}
+.password{
+    color: yellow;
+}
+
+.copy
+{
+    color: aqua;
+    cursor: pointer;
+}
+
+.mainContainer
+{
+    z-index: 2;
+    background-color: #27005D;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 19rem;
+}
+
+.passwordLength
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.passwordLength h4{
+    color: white;
+}
+
+.passwordLength{
+    color: yellow;
+}
+
+.slidder
+{
+width: 96%;
+height: 0.7rem;
+border-radius: 5px;
+appearance: none;
+outline: none;
+ overflow:visible;
+background-color: rgba(97, 79, 135, 0.4);
+/* background-color: #cd2bdb; */
+}
+
+#slidder::-webkit-slider-thumb {
+   
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: yellow;
+    cursor: pointer;
+    box-shadow: 0px 0px 8px yellow ;
+  }
+
+  #slidder::before{
+
+    width: 100%;
+    background-color: #cd2bdb;
+  }
+
+
+  
+
+.check
+{
+    border-color:aqua ;
+}
+
+label
+{
+    color: #ffff;
+}
+
+.strength
+{
+    display: flex;
+    justify-content: space-between;
+    overflow:visible;
+}
+
+.strength .a{
+    color: white;
+    overflow:visible;
+}
+
+.strengthcolor
+{
+    background-color: rgb(215, 204, 204);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 3px rgb(215, 204, 204);
+    
+}
+
+.generatebtn
+{
+    background:  #cd2bdb;
+    padding:  0.5rem 0;
+    width: 15rem;
+    border-radius: 5px;
+    border: none;
+    color: yellow;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 0px 1px 1px  rgb(108, 14, 224);
+    border-bottom: 2px solid yellow;
+}
+
+.checks label{
+    font-size: 1rem;
+    line-height: 2rem;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.check{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    margin-left: 15px;
+    border-radius: 0.2rem;
+}
+
+.check:checked
+{
+    background-color: aqua;
+}
+
+.check:checked::before{
+    content:'✓';
+    position: absolute;
+    font-size: 0.9rem;
+    font-weight: 600;
+    bottom:1%;
+    transform: translateX(20%);
+    transform: translateY(10%);
+    
+}
+
+@media (max-width: 650px) {
+    .wrapper
+    {
+        transform: scale(0.8);
+    }
+
+}
+
+@media (max-width: 300px) {
+    .wrapper
+    {
+        transform: scale(0.2);
+    }
+
+}
